@@ -1,0 +1,11 @@
+Command: cmake -G Ninja -B C:\Projetos\ESP32\build-verify -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCMAKE_MAKE_PROGRAM=C:/Espressif/tools/ninja/1.12.1/ninja.exe -DCMAKE_C_COMPILER=C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe -DCMAKE_CXX_COMPILER=C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-g++.exe -DCMAKE_ASM_COMPILER=C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe -DCCACHE_ENABLE=OFF -DCCACHE_ENABLE=True C:\Projetos\ESP32
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig 'C:/Projetos/ESP32/sdkconfig'
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.52.0.windows.1")
+-- Component directory C:/Espressif/v6.0.2/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - OFF
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+-- The ASM compiler identification is unknown
+-- Found assembler: xtensa-esp32-elf-gcc
+-- Warning: Did not find file Compiler/-ASM
+-- Configuring incomplete, errors occurred!

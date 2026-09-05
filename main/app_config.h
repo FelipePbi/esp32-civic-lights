@@ -1,0 +1,79 @@
+#pragma once
+
+#define APP_FIRMWARE_VERSION "0.8.0"
+#define APP_WIFI_AP_SSID "Civic-Lights"
+/* Development credential only. Change before permanent installation. */
+#define APP_WIFI_AP_PASSWORD "zaq12wsx"
+#define APP_WIFI_AP_CHANNEL 6
+#define APP_WIFI_AP_MAX_CLIENTS 4
+#define APP_WIFI_AP_IP "192.168.4.1"
+#define APP_BLE_SCAN_DURATION_MS 15000
+#define APP_BLE_RECOVERY_SCAN_DURATION_MS 3000
+#define APP_BLE_FAST_RECOVERY_WINDOW_MS 5000
+#define APP_BLE_FAST_RETRY_DELAY_MS 150
+#define APP_BLE_FAST_CONNECT_TIMEOUT_MS 3000
+/* BLE scan units are 0.625 ms: 30 ms interval/window = 100% duty cycle. */
+#define APP_BLE_FAST_SCAN_INTERVAL_UNITS 0x0030
+#define APP_BLE_FAST_SCAN_WINDOW_UNITS 0x0030
+/* BLE scan units are 0.625 ms: 100 ms interval, 30 ms window. */
+#define APP_BLE_SCAN_INTERVAL_UNITS 0x00A0
+#define APP_BLE_SCAN_WINDOW_UNITS 0x0030
+#define APP_BLE_MAX_DEVICES 64
+#define APP_BLE_MAX_SERVICES 16
+#define APP_BLE_MAX_CHARACTERISTICS 48
+#define APP_BLE_MAX_DESCRIPTORS 48
+#define APP_BLE_CONNECT_TIMEOUT_MS 30000
+#define APP_BLE_REQUESTED_SUPERVISION_TIMEOUT_UNITS 150
+#define APP_BLE_INITIAL_SUPERVISION_TIMEOUT_UNITS 256
+#define APP_BLE_WEAK_RSSI_DBM (-88)
+#define APP_BLE_STATUS_INTERVAL_MS 10000
+#define APP_BLE_HEALTH_INTERVAL_MS 10000
+#define APP_BLE_STABILITY_TEST_SECONDS 900
+#define APP_STRICT_SYNC_MODE 1
+
+/* BLE diagnostic console: disabled at boot, bounded scans, no automatic writes. */
+#define APP_BLE_DIAG_MAX_DEVICES 32
+#define APP_BLE_DIAG_SCAN_DURATION_MS 15000
+/* 100% duty cycle: reverse engineering needs every packet it can hear. */
+#define APP_BLE_DIAG_SCAN_INTERVAL_UNITS 0x0030
+#define APP_BLE_DIAG_SCAN_WINDOW_UNITS 0x0030
+#define APP_BLE_DIAG_MAX_SCAN_MS 60000
+#define APP_BLE_DIAG_CONNECT_TIMEOUT_MS 15000
+#define APP_BLE_DIAG_PAYLOAD_MAX_BYTES 64
+#define APP_ANIMATION_RESTORE_TIMEOUT_MS 8000
+#define APP_RUNTIME_ANIMATION_START_TIMEOUT_MS 8000
+#define APP_POLICE_TIMEOUT_MS 30000
+
+/*
+ * Interior lighting (LEDCAR-00-1900). Address, service and characteristic were
+ * confirmed on the real hardware; see docs/interior-led-ble-research.md.
+ * NimBLE stores addresses least-significant byte first: 20:23:12:15:00:19.
+ */
+#define APP_INTERIOR_LIGHT_ADDR_TYPE 0 /* BLE_ADDR_PUBLIC */
+#define APP_INTERIOR_LIGHT_ADDR_BYTES {0x19, 0x00, 0x15, 0x12, 0x23, 0x20}
+#define APP_INTERIOR_LIGHT_SERVICE_UUID16 0xFFE0
+#define APP_INTERIOR_LIGHT_CHARACTERISTIC_UUID16 0xFFE1
+#define APP_INTERIOR_LIGHT_IDLE_DISCONNECT_MS 60000
+#define APP_INTERIOR_LIGHT_CONNECT_TIMEOUT_MS 10000
+#define APP_INTERIOR_LIGHT_DISCOVERY_TIMEOUT_MS 5000
+#define APP_INTERIOR_LIGHT_STEP_GRACE_MS 2000
+/* Coalescing floor for colour-picker drags; matches the observed 50 ms link. */
+#define APP_INTERIOR_LIGHT_MIN_WRITE_INTERVAL_MS 60
+#define APP_INTERIOR_LIGHT_BACKOFF_MIN_MS 2000
+#define APP_INTERIOR_LIGHT_BACKOFF_MAX_MS 30000
+
+#define APP_RF_D0_GPIO 25
+#define APP_RF_D1_GPIO 26
+#define APP_RF_D2_GPIO 27
+#define APP_RF_D3_GPIO 32
+#define APP_RF_VT_GPIO 33
+#define APP_RF_POLL_INTERVAL_MS 10
+#define APP_RF_DEBOUNCE_MS 50
+#define APP_REMOTE_WHITE_BRIGHTNESS 255
+#define APP_REMOTE_RED_BRIGHTNESS 255
+
+#define APP_INDICATOR_GPIO 23
+#define APP_INDICATOR_ACTIVE_LEVEL 0
+
+/* Writes exist only behind validated snapshot + READY_FOR_CONTROL gates. */
+#define SP624E_ALLOW_WRITES 1

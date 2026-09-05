@@ -1,0 +1,27 @@
+# ESP-IDF outputs
+build/
+build.stale/
+managed_components/
+dependencies.lock
+sdkconfig
+sdkconfig.old
+
+# Python / tools
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Editors and local files
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.log
+*.obj
+tests/build/
+board.local.json
+web/node_modules/
+web/*.tsbuildinfo
+web/playwright-report/
+web/test-results/

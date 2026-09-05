@@ -1,0 +1,13 @@
+Command: cmake -G Ninja -B C:\Projetos\ESP32\build-verify3 -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=True C:\Projetos\ESP32
+CMake Error at C:/Espressif/v6.0.2/esp-idf/tools/cmake/build.cmake:697 (message):
+  ERROR: File .component_hash or CHECKSUMS.json for component
+  "espressif/cjson" in the managed components directory does not exist or
+  cannot be parsed.  These files are used by the component manager for
+  component integrity checks.  If they exist in the component source, please
+  ask the component maintainer to remove them.
+
+Call Stack (most recent call first):
+  C:/Espressif/v6.0.2/esp-idf/tools/cmake/project.cmake:773 (idf_build_process)
+  CMakeLists.txt:5 (project)
+
+

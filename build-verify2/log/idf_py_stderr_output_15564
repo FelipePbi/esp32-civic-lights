@@ -1,0 +1,46 @@
+Command: cmake -G Ninja -B C:\Projetos\ESP32\build-verify2 -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=True C:\Projetos\ESP32
+CMake Error at C:/Espressif/v6.0.2/esp-idf/tools/cmake/build.cmake:697 (message):
+  Traceback (most recent call last):
+
+    File "<frozen runpy>", line 198, in _run_module_as_main
+    File "<frozen runpy>", line 88, in _run_code
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_manager\prepare_components\__main__.py", line 6, in <module>
+      main()
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_manager\prepare_components\prepare.py", line 337, in main
+      args.func(args)
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_manager\prepare_components\prepare.py", line 157, in prepare_dep_dirs
+      ).prepare_dep_dirs(
+        ^^^^^^^^^^^^^^^^^
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_manager\core.py", line 113, in wrapper
+      return func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_manager\core.py", line 751, in prepare_dep_dirs
+      downloaded_components = download_project_dependencies(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_manager\dependencies.py", line 548, in download_project_dependencies
+      download_path = fetcher.download()
+                      ^^^^^^^^^^^^^^^^^^
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_tools\sources\fetcher.py", line 29, in download
+      download_path = self.source.download(self.component, self.component_path.as_posix())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_tools\sources\web_service.py", line 335, in download
+      unpack_archive(archive_path, component_cache_path)
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_tools\archive_tools.py", line 106, in unpack_archive
+      prepare_empty_directory(destination_directory)
+    File "C:\Espressif\tools\python\v6.0.2\venv\Lib\site-packages\idf_component_tools\file_tools.py", line 162, in prepare_empty_directory
+      if directory.exists() and any(directory.iterdir()):
+         ^^^^^^^^^^^^^^^^^^
+    File "C:\Espressif\tools\python\Lib\pathlib.py", line 1235, in exists
+      self.stat()
+    File "C:\Espressif\tools\python\Lib\pathlib.py", line 1013, in stat
+      return os.stat(self, follow_symlinks=follow_symlinks)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  PermissionError: [WinError 5] Acesso negado:
+  'C:\\Users\\felip\\AppData\\Local\\Espressif\\ComponentManager\\Cache\\service_d92d8f1e\\espressif__cjson_1.7.19~2_e7883232'
+
+Call Stack (most recent call first):
+  C:/Espressif/v6.0.2/esp-idf/tools/cmake/project.cmake:773 (idf_build_process)
+  CMakeLists.txt:5 (project)
+
+

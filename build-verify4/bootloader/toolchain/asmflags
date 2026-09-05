@@ -1,0 +1,6 @@
+"-specs=C:/Projetos/ESP32/build-verify4/bootloader/specs/picolibc.specs"
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero

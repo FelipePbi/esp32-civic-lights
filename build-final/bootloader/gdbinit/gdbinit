@@ -1,0 +1,2 @@
+source C:/Projetos/ESP32/build-final/bootloader/gdbinit/symbols
+source C:/Projetos/ESP32/build-final/bootloader/gdbinit/connect

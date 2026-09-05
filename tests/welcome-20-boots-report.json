@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-08-09T20:09:02.391510+00:00",
+  "port": "COM5",
+  "cycles_requested": 1,
+  "expectation": "run",
+  "cycles": [
+    {
+      "result": "fail",
+      "restore": false,
+      "start_count": 0,
+      "completed_count": 0,
+      "cancelled_count": 1,
+      "failed_count": 0,
+      "animation": null,
+      "reasons": [
+        "expected exactly one run and verified completion"
+      ],
+      "cycle": 1,
+      "boot_marker": true,
+      "panic": false,
+      "watchdog": false,
+      "unexpected_reboot": false,
+      "log": "tests\\welcome-20-boots-report-logs\\cycle-01.log"
+    }
+  ],
+  "summary": {
+    "run": 0,
+    "skip": 0,
+    "fail": 1,
+    "restore": 0,
+    "panic": 0,
+    "watchdog": 0,
+    "unexpected_reboot": 0
+  },
+  "passed": false
+}

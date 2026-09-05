@@ -1,0 +1,52 @@
+Command: cmake -G Ninja -B C:\Projetos\ESP32\build-verify -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCMAKE_MAKE_PROGRAM=C:/Espressif/tools/ninja/1.12.1/ninja.exe -DCMAKE_C_COMPILER=C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe -DCMAKE_CXX_COMPILER=C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-g++.exe -DCMAKE_ASM_COMPILER=C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe -DCCACHE_ENABLE=OFF -DCCACHE_ENABLE=True C:\Projetos\ESP32
+CMake Warning at C:/Espressif/v6.0.2/esp-idf/tools/cmake/project.cmake:617 (message):
+  enabled ccache in build but ccache program not found
+Call Stack (most recent call first):
+  CMakeLists.txt:5 (project)
+
+
+CMake Error at C:/Espressif/v6.0.2/esp-idf/tools/cmake/project.cmake:622 (__project):
+  The CMAKE_C_COMPILER:
+
+    xtensa-esp32-elf-gcc
+
+  is not a full path and was not found in the PATH.  Perhaps the extension is
+  missing?
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CC" or the CMake cache entry CMAKE_C_COMPILER to the full path to
+  the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:5 (project)
+
+
+CMake Error at C:/Espressif/v6.0.2/esp-idf/tools/cmake/project.cmake:622 (__project):
+  The CMAKE_CXX_COMPILER:
+
+    xtensa-esp32-elf-g++
+
+  is not a full path and was not found in the PATH.  Perhaps the extension is
+  missing?
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:5 (project)
+
+
+CMake Error at C:/Espressif/v6.0.2/esp-idf/tools/cmake/project.cmake:622 (__project):
+  The CMAKE_ASM_COMPILER:
+
+    xtensa-esp32-elf-gcc
+
+  is not a full path and was not found in the PATH.  Perhaps the extension is
+  missing?
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "ASM" or the CMake cache entry CMAKE_ASM_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+Call Stack (most recent call first):
+  CMakeLists.txt:5 (project)
+
+
